@@ -10,7 +10,7 @@ pipeline{
             }
         }
 
-        post{
+        post {
             always{
                 echo "i will say it again"
             }
@@ -22,6 +22,7 @@ pipeline{
             failure{
                 echo "Task Failure"
             }
+
 
             cleanup{
                 echo "dont care success or error"
