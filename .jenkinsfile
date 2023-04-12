@@ -9,5 +9,23 @@ pipeline{
                 echo 'Hello World'
             }
         }
+
+        post{
+            always{
+                echo "i will say it again"
+            }
+
+            success{
+                echo "Task success"
+            }
+
+            failure{
+                echo "Task Failure"
+            }
+
+            cleanup{
+                echo "dont care success or error"
+            }
+        }
     }
 }
