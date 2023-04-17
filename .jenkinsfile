@@ -12,6 +12,25 @@ pipeline{
     }
 }
 
+
+
+stages{
+    stage('Build'){
+        steps{
+            echo('start Build')
+            sh("./mvnw clean compile test-compile")
+            echo("finish Build")
+        }
+    } 
+
+    stage('test'){
+        steps{
+            echo("start build")
+            sh("./mvnw test")
+            echo("finish Build")
+        }
+    }
+}
        
 
         post {
